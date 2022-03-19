@@ -3,7 +3,7 @@ Version:        4.2.0
 Release:        1%{?dist}
 License:        GPLv3
 Group:          Development/Tools/Other
-Summary:        A bash script to securely create a bootable USB device from one image file
+Summary:        Bash script to securely create a bootable USB device from one image file
 URL:            https://github.com/jsamr/bootiso
 Source:         https://github.com/jsamr/bootiso/archive/v%{version}/%{name}-%{version}.tar.gz
 Patch:          https://code.opensuse.org/package/bootiso/raw/master/f/syslinux-lib-root.patch
@@ -11,7 +11,7 @@ BuildArch:      noarch
 Requires:       bc
 Requires:       jq
 Requires:       syslinux
-Requires:       wimtools
+Requires:       wimlib-utils
 
 %description
 A bash program to securely and easily create a bootable USB device from one image file
