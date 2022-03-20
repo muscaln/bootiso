@@ -1,6 +1,6 @@
 Name:           bootiso
 Version:        4.2.0
-Release:        1%{?dist}
+Release:        2%{?dist}
 License:        GPLv3
 Group:          Development/Tools/Other
 Summary:        Bash script to securely create a bootable USB device from one image file
@@ -11,6 +11,8 @@ BuildArch:      noarch
 Requires:       bc
 Requires:       jq
 Requires:       syslinux
+Requires:       rsync
+Requires:       gawk
 Requires:       wimlib-utils
 
 %description
@@ -35,6 +37,9 @@ install -Dm644  extra/man/%{name}.1                %{buildroot}%{_datadir}/man/m
 %{_datadir}/bash-completion/completions/bootiso
 
 %changelog
+* Sun Mar 20 2022 Mustafa Çalışkan <muscaln@protonmail.com> - 4.2.0-2
+- Add missing requires
+
 * Sat Mar 19 2022 Mustafa Çalışkan <muscaln@protonmail.com> - 4.2.0-1
 - Initial
 
